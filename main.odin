@@ -30,7 +30,7 @@ main :: proc() {
 	if !glfw.Init() {
          log.panicf("glfw Init() failure %s %d", glfw.GetError())
 	}
-    defer glfw.Terminate() // Also terminate glfw at the end the end of main() scope
+    defer glfw.Terminate() // Also terminate glfw at the end of main() scope
     
     // STEP 2: We need this proc address to load Vulkan global procs in STEP 3
     instance_proc_addr := rawptr(glfw.GetInstanceProcAddress)
