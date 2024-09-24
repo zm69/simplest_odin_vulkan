@@ -27,9 +27,9 @@ main :: proc() {
     context.logger = log.create_console_logger()
 
     // STEP 1: Initialize glfw library, we must do it, or glfw.GetInstanceProcAddress will not be set in STEP 2
-	if !glfw.Init() {
-         log.panicf("glfw Init() failure %s %d", glfw.GetError())
-	}
+    if !glfw.Init() {
+        log.panicf("glfw Init() failure %s %d", glfw.GetError())
+    }
     defer glfw.Terminate() // Also terminate glfw at the end of main() scope
     
     // STEP 2: We need this proc address to load Vulkan global procs in STEP 3
