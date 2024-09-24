@@ -49,7 +49,7 @@ main :: proc() {
     }
 
     // STEP 5: Print results
-	fmt.println(extension_count, "extensions supported. Result = ", result)
+    fmt.println(extension_count, "extensions supported. Result = ", result)
 
     // NOTE: When you will create vk.Instance you will need to load vk procs related to vk.Instance like this:
     //
